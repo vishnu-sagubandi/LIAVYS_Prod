@@ -1,0 +1,47 @@
+.carousel-indicators li {
+  background-color: black;
+}
+.carousel-control-next-icon {
+  display: none;
+}
+.carousel-control-prev-icon {
+  display: none;
+}
+a.carousel-control-prev {
+  display: none;
+}
+a.carousel-control-next {
+  display: none;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 572px;
+  background-repeat: no-repeat;
+  background: rgb(245, 232, 229);
+  background-size: cover;
+  background-position: center center;
+}
+.section-title__label-style2 p {
+  font-weight: 500;
+}
+
+.section-title__label p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: #333333;
+}
+.mb-75 {
+  margin-bottom: 50px;
+}
+.section-title__label p span:before {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  margin: 0 15px 5px 15px;
+  content: "";
+  background-color: #cccccc;
+}

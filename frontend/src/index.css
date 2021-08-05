@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+body {
+  background-color: #fff;
+}
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.single_footer_part .list-unstyled li a {
+  color: #7f7f7f;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+.single_footer_part .list-unstyled li a:hover {
+  color: #555555;
+}
+
+.form-control {
+  background-color: #f0f0f0 !important;
+}
+
+.hero-text-div {
+  margin-left: 10px;
+}
+
+.review-form-control {
+  background-color: #fff !important;
+  font-weight: normal !important;
+}
+
+.footer_part .single_footer_part .mail_part {
+  position: relative;
+}
+.footer_part .single_footer_part .mail_part input {
+  padding: 20px 15px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 0 solid transparent;
+  margin-top: 20px;
+  width: 80%;
+  background-color: #eaeaea;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  font-weight: 500;
+  font-size: 15px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  font-weight: 500;
+  font-size: 15px;
+}
+
+::placeholder {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.scroll-to-top {
+  font-size: 1.3rem;
+  line-height: 50px;
+  position: fixed;
+  z-index: 999;
+  right: 25px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #333333;
+}
+div.disabled {
+  pointer-events: none;
+  opacity: 0.55;
+}
+span.cart-item-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.footer_part .single_footer_part .mail_part .email_icon {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-color: #ff3368;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 10px;
+  border: 2px solid #ff3368;
+}
+.button-contactForm {
+  color: #fff;
+  border-color: #edeff2;
+  padding: 12px 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: #046c3c;
+}
+.mb-70 {
+  margin-bottom: 70px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+a:hover {
+  text-decoration: none;
+}
+.discounted-price {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #333333;
+}
+.main-price.discounted {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: line-through;
+  color: #aaaaaa;
+}
+.card {
+  position: relative;
+}
+.card img {
+  float: left;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+  border: 1px dotted #7f7f7f;
+}
+
+.product-img {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.product-img-top {
+  position: absolute;
+  z-index: 5;
+}
+.card:hover .product-img {
+  display: block;
+  opacity: 0;
+}
+.hotdeal {
+  background: rgb(245, 232, 229);
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+img.hotdeal-bg-img {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  z-index: 0;
+}
+
+img.hotdeal-img {
+  z-index: 1;
+  width: 80%;
+}
+.navbar-nav.basic-navbar-nav > a.nav-link {
+  color: #046c3c !important;
+}
+.navbar-nav.basic-navbar-nav > a.nav-link.active {
+  border-bottom: 3px solid #046c3c;
+}
+
+.hotdeal-img-div {
+  transition: 1s;
+}
+
+input[type="checkbox"] {
+  /* Double-sized Checkboxes */
+  transform: scale(1.4); /* IE */
+  -moz-transform: scale(1.4); /* FF */
+  -webkit-transform: scale(1.4); /* Safari and Chrome */
+  -o-transform: scale(1.4); /* Opera */
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  img.hotdeal-img.w-100 {
+    width: 70% !important;
+  }
+  img.hotdeal-bg-img {
+    height: 80%;
+  }
+  .footer_part .single_footer_part {
+    margin-bottom: 20px;
+  }
+  .hero-text-div {
+    margin-left: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  img.hotdeal-img {
+    width: 80% !important;
+  }
+  img.hotdeal-bg-img {
+    height: 90%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-text-div {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mb-md-50 {
+    margin-bottom: 50px;
+  }
+  .mb-md-30 {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 450px) {
+  .card img {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+.zoom {
+  animation: scale 8s linear infinite;
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,22 @@
+.dropdown-menu {
+  color: white;
+  background-color: #ff3368;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff3368;
+}
+
+dropdown-item:focus,
+.dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff3368;
+}
+a.text-light:focus,
+a.text-light:hover {
+  color: #fff !important;
+}

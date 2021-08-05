@@ -1,0 +1,89 @@
+.breadcumb-div {
+  background-color: rgb(245, 232, 229);
+}
+
+.breadcumb-text {
+  padding-left: 5rem;
+}
+.product_count {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px 8px 15px;
+}
+.product_count > span {
+  cursor: pointer;
+}
+.product_count > input {
+  color: #555555;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+i.fas.fa-minus {
+  color: red;
+}
+i.fas.fa-plus {
+  color: var(--success);
+}
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+a.text-muted:hover {
+  text-decoration: none;
+}
+
+.product_count input {
+  border: 0 solid transparent;
+  text-align: center;
+}
+.product_count input:focus-visible {
+  outline: 0 !important;
+}
+.nav-pills .nav-item .nav-link {
+  padding: 0;
+  margin: 0.5rem;
+}
+
+/**
+ * Undo the above focused button styles when the element received focus
+ * via mouse click or touch, but not keyboard navigation.
+ */
+*:focus:not(:focus-visible) {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.product_count .input-number {
+  display: inline-block;
+  width: 60px;
+}
+
+@media screen and (max-width: 500px) {
+  img#breadcumb-image {
+    display: none;
+  }
+  .nav-pills .nav-item .nav-link img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav-pills .nav-item .nav-link img {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .preview-img-holder {
+    display: flex;
+  }
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: transparent;
+  border: 1px solid var(--success);
+}
