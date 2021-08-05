@@ -168,6 +168,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+MEDIA_ROOT = BASE_DIR/'media'
+
+STATIC_ROOT = BASE_DIR/'staticfiles'
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
@@ -176,10 +180,6 @@ STATICFILES_DIRS = [
     BASE_DIR/'frontend/build/static',
     BASE_DIR/'frontend/build/'
 ]
-
-MEDIA_ROOT = BASE_DIR/'media'
-
-STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # AWS Credentials
 
