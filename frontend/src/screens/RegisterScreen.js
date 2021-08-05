@@ -42,13 +42,13 @@ function RegisterScreen({ location, history }) {
         <Container className="p-0" fluid="lg" style={{background: "#ededeb"}}>
         <Container className="p-0 w-100 d-flex align-items-center" fluid="lg" style={{minHeight:'85vh',position:'relative',fontFamily:'"Poppins",cursive'}}>
             <div>
-            <img className="wave" src="/img/wave.png" alt="wave png"></img></div>
+            <img className="wave" src="/static/img/wave.png" alt="wave png"></img></div>
             <Container>
             <Row>
-                <Col md={7} lg={7} className="d-none d-sm-none d-md-block align-items-center justify-content-center" stle={{display:'none'}}><img src="/img/bg.svg" alt="bg svg" width="70%" className="m-auto d-block w-100 w-lg-75"/></Col>
+                <Col md={7} lg={7} className="d-none d-sm-none d-md-block align-items-center justify-content-center" stle={{display:'none'}}><img src="/static/img/bg.svg" alt="bg svg" width="70%" className="m-auto d-block w-100 w-lg-75"/></Col>
                 <Col md={5} lg={5} sm={12} className="d-flex align-items-center justify-content-center text-center login-content">
                     <form onSubmit={submitHandler} className="login-form">
-                        <img src="/img/avatar.svg" width="40%" alt="avatar svg" className="mt-4" style={{maxWidth:'90px'}}/>
+                        <img src="/static/img/avatar.svg" width="40%" alt="avatar svg" className="mt-4" style={{maxWidth:'90px'}}/>
                         <h2 className="title my-3">Welcome</h2>
                         {message && <Message variant='danger'>{message}</Message>}
                         {error && <Message variant='danger'>{error}</Message>}

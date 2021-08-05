@@ -121,8 +121,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'liavys',
+        'USER': 'postgres',
+        'PASSWORD': 'Sagu#4553',
+        'HOST': 'liavysecom.cknyggv81jty.ap-southeast-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -169,9 +173,12 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     BASE_DIR/'static',
     BASE_DIR/'frontend/build/static',
-    BASE_DIR/'frontend/build/']
+    BASE_DIR/'frontend/build/'
+]
 
 MEDIA_ROOT = BASE_DIR/'media'
+
+STATIC_ROOT = BASE_DIR/'production/static'
 
 # AWS Credentials
 
@@ -186,7 +193,8 @@ AWS_S3_SIGNATURE_VERSION = "s3v4"
 AWS_S3_REGION_NAME = "us-east-2"
 
 AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL=None
+AWS_DEFAULT_ACL = None
+AWS_QUERYSTRING_AUTH = False
 
 
 # Default primary key field type

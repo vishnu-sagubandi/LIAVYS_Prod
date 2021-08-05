@@ -20,7 +20,7 @@ function Features() {
                 <div className="d-flex flex-column text-center my-4 mx-auto px-3">
                     <h4 style={{fontWeight:'600'}}>SECURE PAYMENTS</h4>
                     <div className="d-flex align-items-center justify-content-center" style={{height:'50px'}}>
-                        <img src="/img/payments.png" alt="payments" width="95%"/>
+                        <img src="/static/img/payments.png" alt="payments" width="95%"/>
                     </div>
                 </div>
             </Row>

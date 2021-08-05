@@ -23,7 +23,7 @@ function Header() {
         <Navbar bg="white" expand="lg" expanded={expanded}>
             <Container className="p-0">
                 <LinkContainer to='/home'>
-                <Navbar.Brand className="p-0"><img src="/img/liavys.svg" alt="Logo" height='55px' className="navbar-brand-logo" />
+                <Navbar.Brand className="p-0"><img src="/static/img/liavys.svg" alt="Logo" height='55px' className="navbar-brand-logo" />
                 
                 </Navbar.Brand></LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />

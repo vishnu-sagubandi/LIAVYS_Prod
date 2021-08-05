@@ -130,7 +130,7 @@ function  OrderScreen({ match,history }) {
                         <span className="me-auto" style={{fontSize:'1.2rem'}}>Payment Successful !!</span>
                     </Toast.Header>
                 </Toast></div>
-                <img style={{position:'absolute',top:'50%',right:'8%',height:'90%',transform: 'translate(0, -50%)'}} src="/img/bcimage.png" id="breadcumb-image" alt="breadcumb"></img>
+                <img style={{position:'absolute',top:'50%',right:'8%',height:'90%',transform: 'translate(0, -50%)'}} src="/static/img/bcimage.png" id="breadcumb-image" alt="breadcumb"></img>
                 <Container>
                     <h1 style={{fontWeight:'700'}} className="mb-3">ORDER ID : {orderId}</h1>
                     <Link to="/home" className="text-muted pr-2" style={{fontSize:"0.9em",fontWeight:'600'}}>HOME /</Link>

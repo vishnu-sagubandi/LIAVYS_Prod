@@ -39,8 +39,8 @@ function Hotdeal() {
             <Container fluid>
                 <Row style={{minHeight:'70vh'}}>   
                     <Col lg={6} md={12} className="hotdeal-img-div heigth-100 d-flex align-items-center justify-content-center py-5" ref={ref} onMouseMove={parallaxMove} onMouseOut={resetStyles}>
-                            <img src="/img/circle-round.png" className="hotdeal-bg-img" alt="hotdeal item bg"></img>
-                            <img src="/img/cabinet.png" className="hotdeal-img w-100 pl-lg-5 zoom" style={styles} alt="hotdeal item"></img>
+                            <img src="/static/img/circle-round.png" className="hotdeal-bg-img" alt="hotdeal item bg"></img>
+                            <img src="/static/img/cabinet.png" className="hotdeal-img w-100 pl-lg-5 zoom" style={styles} alt="hotdeal item"></img>
                     </Col>
                     <Col lg={6} md={12} className="d-flex align-items-center justify-content-center">
                         <div className="countdown-wrapper text-center">
