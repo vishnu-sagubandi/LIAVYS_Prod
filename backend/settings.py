@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c6r@8d7&)8757zt@)&4x11s$##z43vsy_n@8bplqxxzvab#@$w'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG_VALUE", False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'liavys.herokuapp.com']
 
 
 # Application definition
@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,11 +123,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'liavys',
-        'USER': 'postgres',
-        'PASSWORD': 'Sagu#4553',
-        'HOST': 'liavysecom.cknyggv81jty.ap-southeast-1.rds.amazonaws.com',
-        'PORT': '5432'
+        'NAME': os.environ.get("DB_NAME", ''),
+        'USER': os.environ.get("DB_USER", ''),
+        'PASSWORD': os.environ.get("DB_PASSWORD", ''),
+        'HOST': os.environ.get("DB_HOST", ''),
+        'PORT': os.environ.get("DB_PORT", '')
     }
 }
 
@@ -178,16 +179,18 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR/'media'
 
-STATIC_ROOT = BASE_DIR/'production/static'
+STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # AWS Credentials
 
-AWS_ACCESS_KEY_ID = 'AKIAUKP2V6EH7ZU4TZXC'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'liavys-ecom'
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", '')
+# ''
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", '')
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", '')  # ''
 
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AWS_S3_SIGNATURE_VERSION = "s3v4"
 AWS_S3_REGION_NAME = "us-east-2"
