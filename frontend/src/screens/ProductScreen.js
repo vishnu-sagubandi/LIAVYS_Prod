@@ -88,9 +88,10 @@ function ProductScreen({match,location,history}) {
                                     <Tab.Pane eventKey="first">
                                         <Image src={product.image} rounded width="100%" className="m-1 p-3 border border-warning"/>
                                     </Tab.Pane>
+                                    {product.image2 &&
                                     <Tab.Pane eventKey="second">
                                         <Image src={product.image2} rounded width="100%" className="m-1 p-3 border border-warning"/>
-                                    </Tab.Pane>
+                                    </Tab.Pane>}
                                 </Tab.Content>
                                 </Col>
                                 <Col sm={3} className="py-3">
@@ -98,9 +99,10 @@ function ProductScreen({match,location,history}) {
                                     <Nav.Item>
                                     <Nav.Link eventKey="first"><div><Image src={product.image} rounded width="90px" className="m-2 border"/></div></Nav.Link>
                                     </Nav.Item>
+                                    {product.image2 &&
                                     <Nav.Item>
                                     <Nav.Link eventKey="second"><div><Image src={product.image2} rounded width="90px" className="m-2 border"/></div></Nav.Link>
-                                    </Nav.Item>
+                                    </Nav.Item>}
                                 </Nav>
                                 </Col>
                             </Row>

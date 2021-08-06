@@ -36,7 +36,7 @@ function Hero() {
 			className="d-block w-100 zoom"
 			src={slide.image}
 			alt={slide.title}
-			style={{minHeight:'80vh'}}
+			style={{height:'75vh'}}
 			/>
 		</Carousel.Item>))}
 		</Carousel>}

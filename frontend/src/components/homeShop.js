@@ -60,7 +60,6 @@ function HomeShop() {
     <Link to={`/products/${product._id}`} style={{textDecoration:'none'}}>
       <Card style={{border:'none',marginBottom:"25px"}}>
         <Card.Img variant="top" className="product-img" src={product.image}/>
-        <Card.Img variant="top" className="product-img-top" src={product.image2}/>
         <Card.Body className="p-0 py-4">
           <h5>{product.name}</h5>
 		  <Card.Text as='div' className="text-muted">

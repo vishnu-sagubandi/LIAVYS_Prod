@@ -155,15 +155,6 @@ a:hover {
   object-fit: contain;
   z-index: 99;
   opacity: 1;
-  transition: opacity 0.5s;
-}
-.product-img-top {
-  position: absolute;
-  z-index: 5;
-}
-.card:hover .product-img {
-  display: block;
-  opacity: 0;
 }
 .hotdeal {
   background: rgb(245, 232, 229);
