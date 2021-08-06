@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = 'django-insecure-c6r@8d7&)8757zt@)&4x11s$##z43vsy_n@8bplqxxzvab#@$w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG_VALUE", False)
@@ -123,11 +123,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("DB_NAME"),
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT")
+        'NAME': 'liavys',
+        'USER': 'postgres',
+        'PASSWORD': 'Sagu#4553',
+        'HOST': 'liavysecom.cknyggv81jty.ap-southeast-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -168,10 +168,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-MEDIA_ROOT = BASE_DIR/'media'
-
-STATIC_ROOT = BASE_DIR/'staticfiles'
-
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
@@ -181,12 +177,15 @@ STATICFILES_DIRS = [
     BASE_DIR/'frontend/build/'
 ]
 
+MEDIA_ROOT = BASE_DIR/'media'
+
+STATIC_ROOT = BASE_DIR/'staticfiles'
+
 # AWS Credentials
 
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-# ''
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")  # ''
+AWS_ACCESS_KEY_ID = 'AKIAUKP2V6EH7ZU4TZXC'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'liavys-ecom'
 
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -197,7 +196,6 @@ AWS_S3_REGION_NAME = "us-east-2"
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
-AWS_QUERYSTRING_AUTH = False
 
 
 # Default primary key field type
