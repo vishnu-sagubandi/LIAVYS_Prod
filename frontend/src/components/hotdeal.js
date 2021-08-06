@@ -1,5 +1,6 @@
 import React, { useState,useRef} from 'react'
 import {Row,Col, Container,Button} from "react-bootstrap"
+import {Link} from 'react-router-dom'
 
 
 
@@ -53,7 +54,8 @@ function Hotdeal() {
                                 <Col className="d-flex flex-column"><h2 className="text-muted">45</h2><span>SECONDS</span></Col>
                             </Row>
                             </Container>
-                            <Button style={{backgroundColor: '#ff3368',outline:'none',border: '2px solid #ff3368'}}>Buy now</Button>
+                            <Link to='/shop'>
+                            <Button style={{backgroundColor: '#ff3368',outline:'none',border: '2px solid #ff3368'}}>Buy now</Button></Link>
                         </div>
                     </Col>
                 </Row>
