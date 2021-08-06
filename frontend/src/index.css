@@ -24,6 +24,7 @@ body {
 
 .hero-text-div {
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .review-form-control {
@@ -210,6 +211,7 @@ input[type="checkbox"] {
   }
   .hero-text-div {
     margin-left: 70px;
+    margin-right: 70px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -223,6 +225,7 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .hero-text-div {
     margin-left: 120px;
+    margin-right: 120px;
   }
 }
 
