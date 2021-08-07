@@ -61,9 +61,9 @@ function ShopScreen({history,location}) {
                         >
                         <option value=''>All</option>
                         {
-                          categories.map(x=>(
+                          categories ? categories.length ? categories.map(x=>(
                             <option value={x._id} key={x._id}>{x.name}</option>
-                          ))
+                          )):<></>:<></>
                         }
                       </Form.Control>
                     </Form.Group>

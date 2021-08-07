@@ -7,6 +7,7 @@ from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated,IsAdminUser
 from rest_framework import status
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.core.exceptions import ObjectDoesNotExist
 
 
 @api_view(['GET'])
@@ -41,7 +42,13 @@ def get_products(request):
 
 @api_view(['GET'])
 def get_product(request, pk):
-    product = Product.objects.get(_id=pk)
+    product={}
+    try:
+        product = Product.objects.get(_id=pk)
+    except ObjectDoesNotExist:
+        content = {'detail': "This product doesn't exist"}
+        return Response(content, status=status.HTTP_400_BAD_REQUEST)
+
     serializer = ProductSerializer(product, many=False)
     return Response(serializer.data)
 
