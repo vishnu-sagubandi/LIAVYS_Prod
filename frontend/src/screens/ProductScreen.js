@@ -26,6 +26,7 @@ function ProductScreen({match,location,history}) {
     
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails
+    console.log(product)
 
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin
@@ -44,7 +45,7 @@ function ProductScreen({match,location,history}) {
             setComment('')
             dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
         }
-
+        
         dispatch(listProductDetails(match.params.id))
 
     }, [dispatch, match, successProductReview])

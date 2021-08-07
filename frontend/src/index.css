@@ -157,6 +157,7 @@ a:hover {
   z-index: 99;
   opacity: 1;
 }
+
 .hotdeal {
   background: rgb(245, 232, 229);
 }
@@ -238,15 +239,15 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (max-width: 576px) and (min-width: 450px) {
+@media screen and (max-width: 576px) {
   .card img {
-    width: 90%;
-    height: 400px;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .zoom {
-  animation: scale 8s linear infinite;
+  animation: scale 5s linear infinite;
 }
 
 @keyframes scale {

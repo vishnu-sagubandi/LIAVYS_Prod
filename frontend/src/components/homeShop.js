@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import Rating from './rating'
 import { listTopProducts } from '../actions/productActions'
 import Loader from './Loader'
+import Message from './Message'
 
 function HomeShop() {
 
@@ -13,11 +14,13 @@ function HomeShop() {
 
 	const productTopRated=useSelector(state=>state.productTopRated)
 
-	const {error,loading,products}=productTopRated
+	const {error,loading,topProducts}=productTopRated
 
 	useEffect(()=>{
-		dispatch(listTopProducts())
-	},[dispatch])
+		if (!topProducts.length){
+		dispatch(listTopProducts())}
+
+	},[dispatch,topProducts.length])
 
 
     return (
@@ -50,11 +53,11 @@ function HomeShop() {
 		</div>
 	</div>
     <div className="product-carousel-container mb-50 mb-md-30 mb-sm-30">
-		{loading?<Loader/>:error?<h3 className="my-3">{error}</h3>:
+		{loading?<Loader/>:error?<Message variant="danger" >{error}</Message>:
         <Container>
   {/* Stack the columns on mobile by making one full-width and the other half-width */}
-  <Row xs={1} sm={2} md={2} lg={4} className="Cards-group">
-  {products.map(product => (
+  <Row xs={1} sm={2} md={3} lg={4} className="Cards-group">
+  {topProducts.map(product => (
     <Col key={product._id}>
     <div className="p-0 m-0">
     <Link to={`/products/${product._id}`} style={{textDecoration:'none'}}>

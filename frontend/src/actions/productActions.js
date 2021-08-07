@@ -24,6 +24,11 @@ import {
     PRODUCT_TOP_REQUEST,
     PRODUCT_TOP_SUCCESS,
     PRODUCT_TOP_FAIL,
+
+    HERO_CAROUSEL_REQUEST,
+    HERO_CAROUSEL_SUCCESS,
+    HERO_CAROUSEL_FAIL,
+
 } from '../constants/productConstants'
 
 
@@ -41,6 +46,27 @@ export const listTopProducts = () => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: PRODUCT_TOP_FAIL,
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}
+
+export const getHeroCarousel = () => async (dispatch) => {
+    try {
+        dispatch({ type: HERO_CAROUSEL_REQUEST })
+
+        const { data } = await axios.get(`/api/herosection/1`)
+
+        dispatch({
+            type: HERO_CAROUSEL_SUCCESS,
+            payload: data
+        })
+
+    } catch (error) {
+        dispatch({
+            type: HERO_CAROUSEL_FAIL,
             payload: error.response && error.response.data.detail
                 ? error.response.data.detail
                 : error.message,

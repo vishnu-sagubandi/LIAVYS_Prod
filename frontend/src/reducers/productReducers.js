@@ -24,6 +24,10 @@ import {
     PRODUCT_TOP_SUCCESS,
     PRODUCT_TOP_FAIL,
 
+    HERO_CAROUSEL_REQUEST,
+    HERO_CAROUSEL_SUCCESS,
+    HERO_CAROUSEL_FAIL,
+
 } from '../constants/productConstants'
 
 export const productListReducer = (state = { products: [] }, action) => {
@@ -69,7 +73,7 @@ export const categoryListReducer = (state = { categories : [] }, action) => {
 export const productDetailsReducer = (state = { product: {reviews:[],category:{}}}, action) => {
     switch (action.type) {
         case PRODUCT_DETAILS_REQUEST:
-            return { loading: true, ...state }
+            return { loading: true}
 
         case PRODUCT_DETAILS_SUCCESS:
             return {
@@ -122,15 +126,31 @@ export const productReviewCreateReducer = (state = {}, action) => {
 }
 
 
-export const productTopRatedReducer = (state = { products: [] }, action) => {
+export const productTopRatedReducer = (state = { topProducts: [] }, action) => {
     switch (action.type) {
         case PRODUCT_TOP_REQUEST:
-            return { loading: true, products: [] }
+            return { loading: true, topProducts: [] }
 
         case PRODUCT_TOP_SUCCESS:
-            return { loading: false, products: action.payload, }
+            return { loading: false, topProducts: action.payload, }
 
         case PRODUCT_TOP_FAIL:
+            return { loading: false, error: action.payload }
+
+        default:
+            return state
+    }
+}
+
+export const heroCarouselReducer = (state = { hero : [] }, action) => {
+    switch (action.type) {
+        case HERO_CAROUSEL_REQUEST:
+            return { loading: true, hero : [] }
+
+        case HERO_CAROUSEL_SUCCESS:
+            return { loading: false, hero: action.payload, }
+
+        case HERO_CAROUSEL_FAIL:
             return { loading: false, error: action.payload }
 
         default:

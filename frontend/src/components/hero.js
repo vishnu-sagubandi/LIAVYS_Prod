@@ -1,27 +1,29 @@
-import {React,useEffect,useState} from 'react'
-import axios from 'axios'
+import {React,useEffect} from 'react'
 import {Button, Carousel} from 'react-bootstrap'
 import Loader from './Loader'
 import {Link} from 'react-router-dom'
+import { getHeroCarousel } from '../actions/productActions'
+import { useDispatch,useSelector } from "react-redux"
+import Message from './Message'
 
 function Hero() {
 
-	const [hero,setHero]=useState([])
-	const [heroload,setHeroload]=useState(true)
+	const dispatch=useDispatch()
+
+	const heroCarousel=useSelector(state=>state.heroCarousel)
+
+	const {error,loading,hero}=heroCarousel
 
 	useEffect(()=>{
-		async function fetchHero(){
-			const {data} = await axios.get('/api/herosection/1')
-			setHero(data)
-			setHeroload(false)
+		if (!hero.length){
+			dispatch(getHeroCarousel())
 		}
-		fetchHero();
-	},[])
+	},[dispatch,hero.length])
 
 
     return (
 	<div className='d-flex justify-content-center mb-5' >
-		{heroload?<Loader/>:
+		{loading?<Loader/>:error?<Message variant="danger" >{error}</Message>:
       <Carousel variant="dark" style={{width:'100%',maxWidth:'1300px'}}>
 		  {hero.map((slide,index) => ( !(index% 2)?
 		<Carousel.Item interval={2000} key={slide.id} style={{position:'relative'}}>
