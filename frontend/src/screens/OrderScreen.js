@@ -283,7 +283,10 @@ function  OrderScreen({ match,history }) {
                                                             onInstance={(instance) => setInstance(instance)}
                                                         ></DropIn>
                                                     </div>
-                                                   <Button onClick={paymentHandler} className="btn btn-block">Pay</Button></>:<></>
+                                                   <Button 
+                                                   type='button'
+                                                   onClick={paymentHandler} 
+                                                   className="btn btn-block">Pay</Button></>:<></>
                                                 )}
                                         </ListGroup.Item>
                                     )}

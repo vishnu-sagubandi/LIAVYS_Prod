@@ -154,7 +154,7 @@ function PlaceOrderScreen({ history }) {
                                 <Button
                                     type='button'
                                     className='btn-block'
-                                    disabled={cart.cartItems.length === 0}
+                                    disabled={cart.cartItems.length === 0 || loading}
                                     style={{backgroundColor: '#ff3368',outline:'none',border: '2px solid #ff3368'}}
                                     onClick={placeOrder}
                                 >
