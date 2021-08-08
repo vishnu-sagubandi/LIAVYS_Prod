@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Row, Col, ListGroup, Image, Card, Container,Toast,Modal } from 'react-bootstrap'
+import { Button, Row, Col, ListGroup, Card, Container,Toast,Modal } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -190,15 +190,15 @@ function  OrderScreen({ match,history }) {
                                         {order.orderItems.map((item, index) => (
                                             <ListGroup.Item className="px-0" key={index}>
                                                 <Row style={{fontWeight:'500'}}>
-                                                    <Col md={1}>
-                                                        <Image src={item.image} alt={item.name} fluid rounded />
+                                                    <Col xs={1} className="d-flex align-items-center text-muted">
+                                                        {index+1}.
                                                     </Col>
 
                                                     <Col className="d-flex align-items-center">
                                                         <Link to={`/product/${item.product}`} className="nav-link px-0"><span className="cart-item-name text-muted">{item.name}</span></Link>
                                                     </Col>
 
-                                                    <Col md={4} className="d-flex align-items-center text-muted">
+                                                    <Col className="d-flex align-items-center text-muted">
                                                         {item.qty} X ${item.price} = ${(item.qty * item.price).toFixed(2)}
                                                     </Col>
                                                 </Row>

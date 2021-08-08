@@ -39,7 +39,7 @@ function footer() {
 </ul>
 </div>
 </div>
-<div className="col-sm-6 p-0 col-lg-3">
+<div className="col-sm-6 col-lg-3">
 <div className="single_footer_part">
 <h4 className="mb-3">Newsletter</h4>
 <p>Heaven fruitful doesn't over lesser in days. Appear creeping
