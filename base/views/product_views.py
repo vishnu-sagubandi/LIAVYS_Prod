@@ -60,7 +60,7 @@ def get_categories(request):
 
 @api_view(['GET'])
 def getTopProducts(request):
-    products = Product.objects.all().order_by('-rating')[0:8]
+    products = Product.objects.all().order_by('rating')[0:8]
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
 
