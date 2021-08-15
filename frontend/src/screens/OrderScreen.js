@@ -195,7 +195,7 @@ function  OrderScreen({ match,history }) {
                                                     </Col>
 
                                                     <Col className="d-flex align-items-center">
-                                                        <Link to={`/product/${item.product}`} className="nav-link px-0"><span className="cart-item-name text-muted">{item.name}</span></Link>
+                                                        <Link to={`/products/${item.product}`} className="nav-link px-0"><span className="cart-item-name text-muted">{item.name}</span></Link>
                                                     </Col>
 
                                                     <Col className="d-flex align-items-center text-muted">
