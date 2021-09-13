@@ -86,4 +86,14 @@ Admin orders list Page
 Page 404
 ![Page 404](screenshots/404.png)
 
-# Thank You
+#
+
+<div align="center">
+<h1>Thank You ❤️❤️</h1>
+<i>Other places you can find me:</i><br>
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/vishnu_107/)
+[![Twitter](https://img.shields.io/badge/twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/Vishnu80305467)
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/vishnu.sagubandi/)
+
+</div>
